@@ -8,7 +8,10 @@ const scores = [
     {name: 'Khalid', score: 92, grade: null},
     {name: 'Rianne', score: 66, grade: null}
 ];
+for (let i = 0; i < scores.length; i++) {
 
+    console.log(scores[i].score)
+}
 // Verwachtte uitkomsten:
 // 83
 // 77
@@ -17,14 +20,29 @@ const scores = [
 // ==========================================
 
 
-
-
-
 // ==========================================
 // Opdracht 1b
 // Breid je script uit door voor iedere student de score om te rekenen naar een letter en dit in de terminal te printen
 // < 60 = F, < 70 = D, <80 = C, <90 B, <100 = A
 // Zorg ervoor dat dit ook zou werken als de array wel 100 of 200 getallen zou bevatten!
+
+for (let i = 0; i < scores.length; i++) {
+    const score = scores[i].score;
+    if (score < 60) {
+        scores[i].grade = 'F';
+    } else if (score < 70) {
+        scores[i].grade = 'D';
+    } else if (score < 80) {
+        scores[i].grade = 'C';
+    } else if (score < 90) {
+        scores[i].grade = 'B';
+    } else {
+        scores[i].grade = 'A';
+    }
+    console.log(scores[i].grade); //uitwerking opdracht 1b
+
+    console.log(`${scores[i].name}'s score: ${scores[i].score}, grade: ${scores[i].grade}`); //uitwerking opdracht 1c
+}
 // Verwachtte uitkomsten:
 // B
 // C
@@ -33,14 +51,12 @@ const scores = [
 // ==========================================
 
 
-
-
-
 // ==========================================
 // Opdracht 1c
 // Breid je script uit door de bijbehorende letter op te slaan in de 'grade'-property van ieder student-object in de array.
 // Vóór het script zie je de originele objecten,
 // Na jouw script zie je de aangepaste objecten:
+
 // console.log(scores) geeft: [
 //  { name: 'Max', score: 83, grade: 'B' },
 //  { name: 'David', score: 77, grade: 'C' },
@@ -50,19 +66,33 @@ const scores = [
 // ==========================================
 
 
-
-
-
 // ==========================================
 // Opdracht 2
 // Schrijf een script die e-mailadressen genereert voor al onze medewerkers. Sla dit op in een nieuwe property "email" die je toevoegt aan iedere medewerker.
 
+
+
 const NOVIEmployees = [
-    {firstName: 'Nova', lastName: 'Eeken'},
-    {firstName: 'Sam', lastName: 'Barnhoorn'},
-    {firstName: 'Tessa', lastName: 'Steur'},
-    {firstName: 'Mark', lastName: 'Rensen'},
+
+    {firstName: 'Nova', lastName: 'Eeken', email:null},
+    {firstName: 'Sam', lastName: 'Barnhoorn', email:null},
+    {firstName: 'Tessa', lastName: 'Steur',email:null},
+    {firstName: 'Mark', lastName: 'Rensen', email:null},
+
 ];
+for (let i = 0; i < NOVIEmployees.length; i++) {
+    NOVIEmployees[i].email = NOVIEmployees[i].firstName.toLowerCase() + '.' + NOVIEmployees[i].lastName.toLowerCase() + '@novi.nl';
+
+    console.log(NOVIEmployees[i]);
+}
+
+
+
+
+
+
+
+
 
 // Bij NOVI horen de e-mailadressen altijd in het volgende format: voornaam.achternaam@novi.nl
 // Vóór het script zie je de originele objecten,
@@ -76,15 +106,9 @@ const NOVIEmployees = [
 // ==========================================
 
 
-
-
-
-
 // Opdracht 2-BONUS
 // Lukt het je om ervoor te zorgen dat alle e-mailadressen in lowercase letters komen te staan? Dit heb je nog niet geleerd, maar google is your best friend...
 // ==========================================
-
-
 
 
 // ==========================================
@@ -113,6 +137,34 @@ const students = [
     {name: 'Aicha', city: 'Utrecht', zipCode: '3514', neighborhood: null},
     {name: 'Karima', city: 'Utrecht', zipCode: '3531', neighborhood: null},
 ];
+
+for (let i = 0; i < students.length; i++) {
+    const zipCode = students[i].zipCode;
+
+    if (zipCode === '3513'){
+        students[i].neighborhood = 'Pijlsweerd'
+    }
+    else if (zipCode === '3514'){
+        students[i].neighborhood = 'Vogelenbuurt'
+    }
+    else if (zipCode === '3512'){
+        students[i].neighborhood = 'Binnenstad'
+    }
+    else if (zipCode === '3531'){
+        students[i].neighborhood = 'Lombok'
+    }
+    else if (zipCode === '3572'){
+        students[i].neighborhood = 'Wittevrouwen'
+    }
+    else if (zipCode === '3581'){
+        students[i].neighborhood = 'Oudwijk'
+    }
+    else if (zipCode === '3583'){
+        students[i].neighborhood = 'Schildersbuurt'
+    }
+    console.log(students[i])
+}
+
 
 // Verwachte uitkomsten:
 // [
