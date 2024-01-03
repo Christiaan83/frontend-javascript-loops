@@ -8,7 +8,10 @@ const scores = [
     {name: 'Khalid', score: 92, grade: null},
     {name: 'Rianne', score: 66, grade: null}
 ];
+for (let i = 0; i < scores.length; i++) {
 
+    console.log(scores[i].score)
+}
 // Verwachtte uitkomsten:
 // 83
 // 77
@@ -17,14 +20,28 @@ const scores = [
 // ==========================================
 
 
-
-
-
 // ==========================================
 // Opdracht 1b
 // Breid je script uit door voor iedere student de score om te rekenen naar een letter en dit in de terminal te printen
 // < 60 = F, < 70 = D, <80 = C, <90 B, <100 = A
 // Zorg ervoor dat dit ook zou werken als de array wel 100 of 200 getallen zou bevatten!
+
+for (let i = 0; i < scores.length; i++) {
+    const score = scores[i].score;
+    if (score < 60) {
+        scores[i].grade = 'F';
+    } else if (score < 70) {
+        scores[i].grade = 'D';
+    } else if (score < 80) {
+        scores[i].grade = 'C';
+    } else if (score < 90) {
+        scores[i].grade = 'B';
+    } else {
+        scores[i].grade = 'A';
+    }
+
+    console.log(`${scores[i].name}'s score: ${scores[i].score}, grade: ${scores[i].grade}`); //uitwerking opdracht 1c
+}
 // Verwachtte uitkomsten:
 // B
 // C
@@ -33,14 +50,12 @@ const scores = [
 // ==========================================
 
 
-
-
-
 // ==========================================
 // Opdracht 1c
 // Breid je script uit door de bijbehorende letter op te slaan in de 'grade'-property van ieder student-object in de array.
 // Vóór het script zie je de originele objecten,
 // Na jouw script zie je de aangepaste objecten:
+
 // console.log(scores) geeft: [
 //  { name: 'Max', score: 83, grade: 'B' },
 //  { name: 'David', score: 77, grade: 'C' },
@@ -48,9 +63,6 @@ const scores = [
 //  { name: 'Rianne', score: 66, grade: 'D' }
 //  ];
 // ==========================================
-
-
-
 
 
 // ==========================================
@@ -76,15 +88,9 @@ const NOVIEmployees = [
 // ==========================================
 
 
-
-
-
-
 // Opdracht 2-BONUS
 // Lukt het je om ervoor te zorgen dat alle e-mailadressen in lowercase letters komen te staan? Dit heb je nog niet geleerd, maar google is your best friend...
 // ==========================================
-
-
 
 
 // ==========================================

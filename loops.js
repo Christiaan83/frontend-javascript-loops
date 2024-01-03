@@ -1,5 +1,9 @@
 // ==========================================
 // Opdracht 1. Maak een for loop die het volgende patroon in de terminal print:
+
+for (let i = 0; i < 6; i++) {
+    console.log("*".repeat(i))
+}
 // Verwachte uitkomsten:
 // *
 // **
@@ -12,11 +16,15 @@
 // ==========================================
 
 
-
-
-
 // ==========================================
 // Opdracht 2. Maak een for-loop die 4 keer het woord "loop..." logt, en bij de laatste (vijfde) loop het woord "klaar!"
+for (let i = 0; i < 5; i++) {
+    if (i < 4) {
+        console.log("loop");
+    } else {
+        console.log("klaar!")
+    }
+}
 // Verwachte uitkomsten:
 // loop...
 // loop...
@@ -26,12 +34,19 @@
 // ==========================================
 
 
-
-
-
 // ==========================================
 // Opdracht 3: maak een for-loop die van 0 tot 9 loopt en de getallen 0 tot 9 logt.
 // Echter, vanaf het getal 3 komt er een > voor ieder getal te staan, en vanaf het getal 6 komt er >> voor ieder getal te staan.
+for (let i = 0; i < 10; i++) {
+    if (i < 3) {
+        console.log(i)
+    } else if (i < 6) {
+        console.log("> " + i)
+    } else {
+        console.log(">> " + i)
+    }
+
+}
 // Verwachte uitkomsten:
 // 0
 // 1
@@ -46,13 +61,22 @@
 // ==========================================
 
 
-
-
-
 // ==========================================
 // Opdracht 4 (BONUS): schrijf een for-loop die van 0 tot 100 loopt en de getallen print.
 // Echter, voor veelvouden van 3 print je "Fizz" in plaats van het nummer, en voor veelvouden van 5 print je "Buzz".
 // Voor getallen die zowel een veelvoud van 3 als van 5 zijn, print je "FizzBuzz"
+for (let i = 1; i <= 100; i++) {
+
+    if (i % 3 === 0 && i % 5 === 0) {
+        console.log("FizzBuzz")
+    } else if (i % 5 === 0) {
+        console.log("Buzz")
+    } else if (i % 3 === 0) {
+        console.log("Fizz")
+    } else {
+        console.log(i)
+    }
+}
 // Verwachte uitkomsten:
 // 1
 // 2
